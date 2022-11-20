@@ -1,0 +1,379 @@
+body{
+    
+    background-color: rgb(172, 170, 170);
+}
+
+.container{
+    max-width: 1500px;
+     margin:0 auto; 
+}
+
+.car{
+    margin:100px 30px -50px 30px;
+    display: inline-block;
+    animation-name:pickup;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-delay:1s;
+    animation-iteration-count:infinite;
+    animation-play-state:running;
+    animation-fill-mode: forwards;
+}
+
+.car:hover{
+    animation-play-state:paused;
+   
+}
+.car:hover .car__wheel1,.car:hover .car__wheel2{
+    background-color: rgba(226, 52, 39, 0.8);
+    
+}
+.car:hover .car__body img{
+    width:50px;
+    height: 50px;
+    transform: translate(-10px,-20px);
+}
+
+.car__inner{
+    
+    width: 220px;
+    height: 100px;
+    position:relative;
+    background-color:rgb(172, 170, 170);
+    
+}
+
+.car__body{
+    position:absolute;
+    top:50px;
+    width:220px;
+    height: 50px;
+    background-color: rgb(231, 127, 127);
+    border-radius: 10px/20px;
+    padding-top:20px;
+}
+.car__body img{
+    margin: 0px 0 0px 100px;
+}
+
+.car__roof{
+    position:absolute;
+    top:0;
+    left:80px;
+    width:70px;
+    height: 50px;
+    background-color: rgb(231, 127, 127);
+    border-radius: 15% 15% 0 0;
+}
+.car__trunk{
+    position:absolute;
+    top:10px;
+    left:20px;
+}
+
+.car__windshield{
+    position:absolute;
+    top:7px;
+    left:120px;
+    width:30px;
+    height: 50px;
+    background-color: rgb(231, 127, 127);
+    transform-origin: right top;
+    transform: rotate(-30deg);
+}
+.car__window1{
+    position:absolute;
+    top:10px;
+    left: 90px;
+
+    width: 50px;
+    height: 40px;
+    background-color: aqua;
+    overflow: hidden;
+}
+
+.car__headlight{
+    position:absolute;
+    top:60px;
+    right:0;
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+}
+
+.car__wheel1{
+    padding:12.5px;
+    position:absolute;
+    bottom:-25%;
+    left:30px;
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color:black;
+    
+}
+
+.cap1{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background-color:wheat;
+    margin:0 auto;
+    
+    animation-name:wheel-cap;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-delay:1s;
+    animation-iteration-count: infinite;
+    animation-play-state:running;
+    animation-fill-mode: forwards;
+
+}
+.cap2{
+    position:absolute;
+    top:12.5px;
+    left:12.5px ;
+    width: 25px;
+    height: 25px;
+    background-color: wheat;
+    margin:0 auto;
+    /* transform:rotate (-45deg); */
+    
+    
+    animation-name:wheel-cap2;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-delay:1s;
+    animation-iteration-count: infinite;
+    animation-play-state:running;
+    animation-fill-mode: backwards;
+
+}
+
+.car__wheel2{
+    padding:12.5px;
+    position:absolute;
+    bottom:-25%;
+    left:140px;
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color:black;
+    
+}
+
+
+@keyframes pickup {
+    0%{
+        transform: translateX(0px);
+    }
+    
+    20%{
+        transform: translateX(300px);
+    }
+    25%{
+         transform-origin:bottom left; 
+        transform: translateX(370px)  rotate(-21deg);
+    }
+    30%{
+       
+        transform: translateX(450px) translateY(-70px) ;
+    }
+    
+    55%{
+        transform: translateX(825px) translateY(-70px) ;
+    }
+    
+    60%{
+         transform-origin:top left; 
+        transform: translateX(890px) translateY(-68px) rotate(25deg);
+
+    }
+    65%{
+        transform: translateX(985px);
+    }
+    
+    85%{
+        transform: translateX(1275px);
+    }
+    90%{
+        transform: translateX(1390px) translateY(400px);
+        
+    }
+   
+    
+    100%{
+        transform: translateX(1550px) translateY(1050px);
+        
+    }
+    
+}
+
+@keyframes wheel-cap{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+   
+}
+
+@keyframes wheel-cap2{
+    0%{
+        transform:rotate(-45deg);
+    }
+    25%{
+        transform: rotate(45deg);
+    }
+    50%{
+        transform: rotate(135deg);
+    }
+    75%{
+        transform: rotate(225deg);
+    }
+    100%{
+        transform: rotate(315deg);
+    }
+       
+}
+
+.road__stone{
+    position:relative;
+    width:280px;
+    height:70px;
+    background-color:rgb(90, 90, 90);
+    margin:0 auto;
+}
+.road__stone-corner1{
+    position:absolute;
+    left:0;
+    top:0;
+    width:60px;
+    height: 140px;
+    background-color: rgba(90, 90, 90);
+    transform-origin: left top;
+    transform:rotate(60deg);
+}
+
+.road__stone-corner2{
+    position:absolute;
+    right:0;
+    top:0;
+    width:60px;
+    height:140px;
+    background-color: rgb(90, 90, 90);
+    transform-origin: right top;
+    transform:rotate(-60deg);
+}
+
+.road__asphalt{
+    position: relative;
+    width:100%;
+    height: 55px;
+    background-color:rgb(90, 90, 90);
+    
+}
+
+
+ .road__asphalt-continuation{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 180px;
+    height:55px;
+    background: linear-gradient(0deg, rgb(122, 122, 122), rgb(115, 251, 255), rgb(237, 242, 208));
+} 
+
+
+/* 2 ая машина */
+
+.block{
+    margin-top: 500px;
+    position:relative;
+    height: 1000px;
+    width: 100%;
+    background-color: rgb(172, 170, 170);
+}
+
+.car2{
+    position:absolute;
+    top:0;
+    left: 0;
+    transform: rotate(45deg);
+    animation-name:pickup2;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-delay:1s;
+    animation-iteration-count:infinite;
+    animation-play-state:running;
+    animation-fill-mode: forwards;
+}
+
+.car2:hover{
+    animation-play-state:paused;
+   
+}
+.car2:hover .car__wheel1, .car2:hover .car__wheel2{
+    background-color: rgba(226, 52, 39, 0.8);
+    
+}
+.car2:hover .car__body img{
+    width:50px;
+    height: 50px;
+    transform: translate(-10px,-20px);
+}
+
+@keyframes pickup2 {
+0%{
+    left:0;
+    top:0;
+    transform: rotate(45deg);
+}
+40%{
+    left:350px;
+    top:350px;
+    transform: rotate(45deg);
+}
+45%{
+    left:380px;
+    top:380px;
+    transform: rotate(0deg);
+}
+100%{
+    left:1600px;
+    top:380px;
+    transform: rotate(0deg);
+}
+
+}
+
+.road2{
+    width: 50%;
+    height: 50px;
+    background-color: rgb(90, 90, 90);
+    position:absolute;
+    top:0;
+    left:-40px;
+    transform-origin:top left;
+    transform:rotate(45deg);
+    
+}
+
+.road3{
+    width: 86%;
+    height: 63px;
+    background-color:rgb(90, 90, 90);
+    position:absolute;
+    top:50%;
+    right:-250px;  
+}
